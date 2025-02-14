@@ -23,6 +23,19 @@ class Post
     #[Column(type: Types::STRING, length: 150)]
     private ?string $title = null;
 
+    #[Column(type: Types::STRING, length: 65535)]
+    private ?string $body = null;
+
     #[Column(name: 'created_at', type: Types::DATETIME_IMMUTABLE, options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeInterface $createdAt = null;
+
+    public function getTitle(): string
+    {
+        return $this->title ?? '';
+    }
+
+    public function getBody(): string
+    {
+        return $this->body ?? '';
+    }
 }
