@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class PostController extends AbstractController
 {
-    #[Route('/post/index')]
+    #[Route('/post/index', name: 'post_index')]
     public function index(EntityManagerInterface $entityManager): Response
     {
         return $this->render(
