@@ -2,7 +2,13 @@
 
 ## Development environment
 
-### Docker container
+#### Assets
+```
+php bin/console tailwind:build --minify
+php bin/console asset-map:compile
+```
+
+#### Docker container
 
 Access local database
 ```
