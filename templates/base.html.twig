@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <title>{% block title %}Dev Blog{% endblock %}</title>
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="bg-stone-900 text-white">
         {% block body %}
             <div id="navigation">
                 <ul>
